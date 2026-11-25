@@ -9,7 +9,7 @@ A multi-week cloud systems engineering portfolio built on **Amazon Web Services 
 | Week | Module Title | Key Technologies | Documentation | Status |
 | :--- | :--- | :--- | :--- | :--- |
 | **Week 01** | **Deploy Windows Server 2022 & Fleet Manager RDP** | AWS EC2, RDP (`TCP 3389`), Systems Manager Fleet Manager, ICMP | [Open Week 01 Docs](docs/01-windows-server-deployment.md) | Completed |
-| **Week 02** | **Create Users, Apply Security Settings & Connect Computers** | Active Directory Users & Computers, Security Policies, Domain Join | [Open Week 02 Docs](docs/02-users-security-domain-join.md) | Upcoming |
+| **Week 02** | **Local Security Policy, User-Specific GPOs & P2P File Sharing** | Local Security Policy (`secpol.msc`), User GPOs (`mmc.exe`), Workgroup SMB (`TCP 445`), ACLs | [Open Week 02 Docs](docs/02-users-security-domain-join.md) | Completed |
 
 ---
 
