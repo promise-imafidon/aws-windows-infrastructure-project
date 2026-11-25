@@ -1,6 +1,6 @@
 # Week 01: AWS EC2 Windows Server 2022 Deployment & Remote Management
 
-[← Back to Master Project Overview](../../README.md)
+[← Back to Master Project Overview](../README.md)
 
 ## Objective
 This first phase deploys a **Windows Server 2022** virtual machine (`MyClient`) in **Amazon Web Services (AWS) EC2** (`us-east-1c`). It establishes a cost-optimized (`t3.micro`) cloud workstation, configures a persistent local administrator (`ClientAdmin`), enables browser-based remote desktop sessions via **AWS Systems Manager Fleet Manager**, and verifies external ICMP network reachability.
@@ -24,7 +24,7 @@ This first phase deploys a **Windows Server 2022** virtual machine (`MyClient`) 
 Launched a Windows Server 2022 Base virtual machine named `MyClient` on a `t3.micro` tier and generated an RSA key pair (`MyClient.pem`) to decrypt the initial Administrator password.
 
 <p align="center">
-  <img src="../../images/01-windows-server-deployment/01-ec2-instance-running.png" alt="EC2 Instance Running" width="800">
+  <img src="../images/01-windows-server-deployment/01-ec2-instance-running.png" alt="EC2 Instance Running" width="800">
   <br>
   <em>Figure 1.1: AWS EC2 console confirming <code>MyClient</code> (<code>i-0f292adee40fabca2</code>) is running on <code>t3.micro</code> in <code>us-east-1c</code> with 3/3 status checks passed.</em>
 </p>
@@ -36,7 +36,7 @@ Launched a Windows Server 2022 Base virtual machine named `MyClient` on a `t3.mi
 Decrypted the Administrator password using `MyClient.pem` and established an authenticated RDP session over TCP port `3389`.
 
 <p align="center">
-  <img src="../../images/01-windows-server-deployment/01-windows-server-desktop.png" alt="Windows Server 2022 Desktop" width="800">
+  <img src="../images/01-windows-server-deployment/01-windows-server-desktop.png" alt="Windows Server 2022 Desktop" width="800">
   <br>
   <em>Figure 1.2: Initial authenticated Remote Desktop session displaying the Windows Server 2022 graphical interface.</em>
 </p>
@@ -48,7 +48,7 @@ Decrypted the Administrator password using `MyClient.pem` and established an aut
 Created a persistent local administrator account (`ClientAdmin`) with a non-expiring password and added it to the built-in `Administrators` group via Computer Management.
 
 <p align="center">
-  <img src="../../images/01-windows-server-deployment/01-clientadmin-user.png" alt="ClientAdmin Local User Setup" width="800">
+  <img src="../images/01-windows-server-deployment/01-clientadmin-user.png" alt="ClientAdmin Local User Setup" width="800">
   <br>
   <em>Figure 1.3: Local Users and Groups properties confirming <code>ClientAdmin</code> is an active member of the Administrators group.</em>
 </p>
@@ -60,7 +60,7 @@ Created a persistent local administrator account (`ClientAdmin`) with a non-expi
 Configured AWS Systems Manager Quick Setup (Host Management) to attach required IAM policies and the EC2 Launch Agent, enabling full-screen browser-based RDP sessions without a local client.
 
 <p align="center">
-  <img src="../../images/01-windows-server-deployment/01-fleet-manager-rdp.png" alt="Fleet Manager Remote Desktop" width="800">
+  <img src="../images/01-windows-server-deployment/01-fleet-manager-rdp.png" alt="Fleet Manager Remote Desktop" width="800">
   <br>
   <em>Figure 1.4: Full-screen Windows Server 2022 desktop session running inside the browser via AWS Systems Manager Fleet Manager.</em>
 </p>
@@ -72,7 +72,7 @@ Configured AWS Systems Manager Quick Setup (Host Management) to attach required 
 Retrieved the instance's assigned Public and Private IPv4 addresses and verified external network reachability from a local workstation using `ping`.
 
 <p align="center">
-  <img src="../../images/01-windows-server-deployment/01-ping-verification.png" alt="Ping Connectivity Verification" width="800">
+  <img src="../images/01-windows-server-deployment/01-ping-verification.png" alt="Ping Connectivity Verification" width="800">
   <br>
   <em>Figure 1.5: Local Command Prompt confirming 0% packet loss when pinging the <code>MyClient</code> Public IPv4 address.</em>
 </p>
